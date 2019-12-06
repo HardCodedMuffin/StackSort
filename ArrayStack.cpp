@@ -42,7 +42,56 @@ void ArrayStack::pushrandom(int size) {
 	srand(time(NULL));		    // initialize the random number generator
 	for (int i = 0; i < size; i++)
 	{
-		c = 'a' + rand() % 52;            // Convert to a character from a-z
+		c = rand() % 26 + 65;
+		if (rand() % 2) {
+			c += 32;
+		}
 		push(c);
 	}
+}
+
+void ArrayStack::peekall(int size) {
+	for (int i = 0; i <size; i++)
+	{
+		std::cout << ("%s ", items[i]) << " ";
+	}
+}
+
+void ArrayStack::swap(int a, int b) {
+	int t = a;
+	a = b;
+	b = t;
+}
+
+
+int ArrayStack::partition(char items[], int low, int high) {
+	int pivot = items[high];
+	int i = (low - 1);
+
+	for (int j = low; j <= high - 1; j++)
+	{
+		if (items[j] <= pivot)
+		{
+			i++;
+			swap(items[i], items[j]);
+		}
+	}
+	swap(items[i + 1], items[high]);
+	return (i + 1);
+}
+
+void ArrayStack::quickSort(char items[], int low, int high) {
+	if (low < high)
+	{
+		int pi = partition(items, low, high);
+
+		quickSort(items, low, pi - 1);
+		quickSort(items, pi + 1, high);
+	}
+}
+
+void ArrayStack::printAll(int items[], int size) {
+	for (int i = 0; i < size; i++)
+		std::cout << ("%s ", items[i]);
+
 }
