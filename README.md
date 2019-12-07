@@ -1,1 +1,1 @@
-# StackSort
+# StackSort make it simple 
