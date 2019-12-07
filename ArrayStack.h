@@ -6,7 +6,7 @@ const int MAX_STACK = 100;
 class ArrayStack {
 private:	
 	char items[MAX_STACK];     // Array of stack items
-	int top;				   // Index to top of stack
+	int top;		   // Index to top of stack
 public:
 	ArrayStack();              // Default constructor
 	bool isEmpty() const;
