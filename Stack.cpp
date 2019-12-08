@@ -13,7 +13,7 @@ bool ArrayStack::isEmpty() const {
 
 bool ArrayStack::push(const char& newEntry) {
 	bool result = false;
-	if (top < MAX_STACK - 1)			// Does stack have room for newEntry?
+	if (top < MAX_STACK - 1)		// Does stack have room for newEntry?
 	{
 		top++;
 		items[top] = newEntry;
@@ -22,12 +22,12 @@ bool ArrayStack::push(const char& newEntry) {
 	return result;
 }
 
-/* With this function, you can give an array to push it to the stack.Â 
+/* With this function, you can give an array to push it to the stack. 
 So, you didn't have to enter items one by one with the hand.
-Instead of you will use the push(const char& newEntry) function.Â  */
+Instead of you will use the push(const char& newEntry) function.  */
 void ArrayStack::pushAll(char array[], int size) {
 	bool result = false;
-	if (top < MAX_STACK - 1)			// Does stack have room for newEntry?
+	if (top < MAX_STACK - 1)		// Does stack have room for newEntry?
 	{
 		for (int i = 0; i < size; i++)
 		{
@@ -38,13 +38,13 @@ void ArrayStack::pushAll(char array[], int size) {
 
 void ArrayStack::pushrandom(char items[], int size) {
 	char c;
-	srand(time(NULL));				 // initialize the random number generator
+	srand(time(NULL));				 // Initialize the random number generator
 	for (int i = 0; i < size; i++)
 	{
 		c = rand() % 26 + 65;
-		/*if (rand() % 2) {
+		if (rand() % 2) {
 			c += 32;
-		}*/
+		}
 		push(c);
 	}
 	toArray(items, size);
@@ -54,7 +54,7 @@ bool ArrayStack::pop() {
 	bool result = false;
 	if (!isEmpty())
 	{
-		top--;
+		top--;						// Pop removes the element that top of to stack by decreasing size of it
 		result = true;
 	}
 	return result;
@@ -70,7 +70,7 @@ char ArrayStack::peek() const {
 void ArrayStack::peekall(int size) {
 	for (int i = 0; i < size; i++)
 	{
-		std::cout << ("%s ", items[i]) << " ";
+		std::cout << ("%d ", items[i]) << " ";
 	}
 }
 
