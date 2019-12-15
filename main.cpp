@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include "QuickSort.h"
-#include "Stack.h"
+#include "quicksort.h"
+#include "stack.h"
 
 using namespace std;
 
