@@ -1,4 +1,4 @@
-#include "QuickSort.h"
+#include "quicksort.h"
 #include <iostream>
 
 //the function that swaps two-element
