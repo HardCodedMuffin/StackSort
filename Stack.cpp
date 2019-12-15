@@ -1,7 +1,7 @@
 #include <iostream>
 #include <time.h>
 #include <cassert>  
-#include "Stack.h"
+#include "stack.h"
 
 int low = 0;
 
@@ -13,7 +13,7 @@ bool ArrayStack::isEmpty() const {
 
 bool ArrayStack::push(const char& newEntry) {
 	bool result = false;
-	if (top < MAX_STACK - 1)		// Does stack have room for newEntry?
+	if (top < MAX_STACK - 1)			// Does stack have room for newEntry?
 	{
 		top++;
 		items[top] = newEntry;
@@ -22,12 +22,12 @@ bool ArrayStack::push(const char& newEntry) {
 	return result;
 }
 
-/* With this function, you can give an array to push it to the stack. 
+/* With this function, you can give an array to push it to the stack.Â 
 So, you didn't have to enter items one by one with the hand.
-Instead of you will use the push(const char& newEntry) function.  */
+Instead of you will use the push(const char& newEntry) function.Â  */
 void ArrayStack::pushAll(char array[], int size) {
 	bool result = false;
-	if (top < MAX_STACK - 1)		// Does stack have room for newEntry?
+	if (top < MAX_STACK - 1)			// Does stack have room for newEntry?
 	{
 		for (int i = 0; i < size; i++)
 		{
@@ -54,7 +54,7 @@ bool ArrayStack::pop() {
 	bool result = false;
 	if (!isEmpty())
 	{
-		top--;						// Pop removes the element that top of to stack by decreasing size of it
+		top--;					// Pop removes the element that top of to stack by decreasing size of it
 		result = true;
 	}
 	return result;
