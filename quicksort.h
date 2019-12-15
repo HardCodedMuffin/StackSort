@@ -1,5 +1,5 @@
-#ifndef QuickSort_H
-#define QuickSort_H
+#ifndef quicksort_h
+#define quicksort_h
 
 void swap(int a, int b);
 int partition(char items[], int low, int high);
