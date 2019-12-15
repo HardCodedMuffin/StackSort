@@ -1,5 +1,5 @@
-#ifndef Stack_H
-#define Stack_H
+#ifndef stack_h
+#define stack_h
 
 const int MAX_STACK = 100;
 
